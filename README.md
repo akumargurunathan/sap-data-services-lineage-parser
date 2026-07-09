@@ -96,7 +96,7 @@ python ds_ui_launcher.py
 
 ### Tab 2 — Targeted Lineage
 
-1. Enter one or more target table names (comma-separated), e.g. `TBDWFT_INVOICES, DBO.IRI_ANAGCLI_NEW`
+1. Enter one or more target table names (comma-separated), e.g. `FACT_SALES, DBO.DIM_CUSTOMER`
 2. Set **Max Hops** (default 6)
 3. Click **Run Search**
 4. Explore results in the tree view
@@ -105,7 +105,7 @@ python ds_ui_launcher.py
 
 ### Job-Level Trace (advanced)
 
-1. Enter the exact BODS job name, e.g. `SHXIRI01_DATI_OUT`
+1. Enter the exact BODS job name, e.g. `JOB_LOAD_SALES_DWH`
 2. Click **Run Job Trace**
 3. The engine finds all target tables for that job and traces each upstream automatically
 4. The resulting HTML has one tab per target table
@@ -154,7 +154,7 @@ The HTML graph is fully self-contained (no server required). Key controls:
 
 ```python
 {
-    "target_table":     str,            # e.g. "DBO.IRI_ANAGCLI_NEW"
+    "target_table":     str,            # e.g. "DBO.MY_TARGET_TABLE"
     "hop_map":          {table: int},   # distance from target (0 = target itself)
     "upstream_tree":    {table: [parents]},
     "terminal_sources": set,            # leaf nodes (SAP, FILE, EXCEL, bare tables)
@@ -215,7 +215,7 @@ pytest
 Edit `config.py` to set default paths:
 
 ```python
-INPUT  = {"path": r"C:\BODS_EXPORTS\BODS_FULL_PROD.xml"}
+INPUT  = {"path": r"C:\BODS_EXPORTS\MY_REPOSITORY.xml"}
 OUTPUT = {"output_dir": r"C:\DS_Output"}
 ```
 
@@ -233,4 +233,4 @@ OUTPUT = {"output_dir": r"C:\DS_Output"}
 
 ## License
 
-Internal tool —  Not for public redistribution.
+This project is provided for internal and educational use. Please review your organisation's data governance policy before sharing repository exports or lineage outputs externally.
