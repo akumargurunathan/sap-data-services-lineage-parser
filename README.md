@@ -233,4 +233,4 @@ OUTPUT = {"output_dir": r"C:\DS_Output"}
 
 ## License
 
-Internal tool — Accenture / Client use only. Not for public redistribution.
+Internal tool —  Not for public redistribution.
