@@ -1,5 +1,3 @@
-# sap-data-services-lineage-parser
-A tool to extract and map data lineage from SAP Data Services (BODS) repository XML exports.
 # DOPPIA MACCHINA G2
 
 **End-to-end data lineage extraction engine for SAP Business Objects Data Services (BODS)**
